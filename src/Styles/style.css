@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+    background-image: url(https://media.tenor.com/lEuZK57PtxIAAAAC/space-stars.gif);
+}
+
+.header{
+    display: flex;
+    color: white;
+}
+
+.Logo-Header{
+    float: left;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    margin-left: 130px;
+    margin-top: 49px;
+}
+
+.Text-Logo{
+    font-family: orbitron;
+    font-size: 32px;
+    margin-top: 66px;
+    margin-left: 5px;
+}
+
+.Navigation{
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 130px;
+    margin-top: 53px;
+    gap: 35px;
+    font-size: 19px;
+}
+
+.Navigation-Home{
+    font-weight: bolder;
+}
+
+.Navigation-Payment:hover{
+    font-weight: bolder;
+}
+
+.Navigation-Merch:hover{
+    font-weight: bolder;
+}
+
+.Navigation-Songs:hover{
+    font-weight: bolder;
+}
+
+.Navigation-Services:hover{
+    font-weight: bolder;
+}
