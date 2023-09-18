@@ -1,55 +1,153 @@
-body{
-    background-color: black;
-    background-image: url(https://media.tenor.com/lEuZK57PtxIAAAAC/space-stars.gif);
+body {
+  background-color: black;
+  background-image: url(https://media.tenor.com/lEuZK57PtxIAAAAC/space-stars.gif);
 }
 
-.header{
-    display: flex;
-    color: white;
+* {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
-.Logo-Header{
-    float: left;
-    width: 75px;
-    height: 75px;
-    border-radius: 100%;
-    margin-left: 130px;
-    margin-top: 49px;
+.App {
+  text-align: start;
+  margin-left: 9vw;
+  margin-right: 9vw;
+  margin-top: 3.5vw;
+  color: white;
 }
 
-.Text-Logo{
-    font-family: orbitron;
-    font-size: 32px;
-    margin-top: 66px;
-    margin-left: 5px;
+.container {
+  width: 100%;
 }
 
-.Navigation{
-    flex: 1; 
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 130px;
-    margin-top: 53px;
-    gap: 35px;
-    font-size: 19px;
+/* Dibawah ini preset CSS*/
+
+.flex {
+  display: flex;
 }
 
-.Navigation-Home:hover{
-    font-weight: bolder;
+.jc-sb {
+  justify-content: space-between;
 }
 
-.Navigation-Payment:hover{
-    font-weight: bolder;
+.ai-c {
+  align-items: center;
 }
 
-.Navigation-Merch:hover{
-    font-weight: bolder;
+.fd-r {
+  flex-direction: row;
 }
 
-.Navigation-Songs:hover{
-    font-weight: bolder;
+.fd-c {
+  flex-direction: column;
 }
 
-.Navigation-Services:hover{
-    font-weight: bolder;
+.mt-4 {
+  margin-top: 40px;
+}
+
+/* Dibawah ini custom CSS*/
+
+.header {
+  width: 100%;
+}
+
+.Logo-Header {
+  width: 75px;
+}
+
+.Navigation,
+.nav-container {
+  gap: 16px;
+}
+
+.hamburger-icon {
+  font-size: 2rem;
+  display: none;
+}
+
+.Text-Logo {
+  color: #fff;
+  font-family: Orbitron;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: normal;
+}
+
+.nav {
+  display: block;
+  cursor: default;
+}
+
+.nav:not(.nav-active):hover {
+  cursor: pointer;
+}
+
+.nav-active {
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+.Navigation {
+  position: relative;
+}
+
+.nav-dropdown-container {
+  background: #1e1e1e;
+  width: 150px;
+  position: absolute;
+  right: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socialmedia-logo > img {
+  object-fit: contain;
+}
+
+.footer {
+  width: 100%;
+  bottom: 0px;
+  margin-bottom: 50px;
+}
+
+.footer-p1 {
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.footer-p2 {
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.socialmedia-logo {
+  gap: 5px;
+}
+
+.socialmedia-logo {
+  margin-top: -20px;
+}
+
+/* Mobile UI*/
+@media only screen and (max-width: 800px) {
+  .hamburger-icon {
+    display: block;
+  }
+
+  .nav-container {
+    display: none;
+  }
 }
