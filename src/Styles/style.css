@@ -34,7 +34,7 @@ body{
     font-size: 19px;
 }
 
-.Navigation-Home{
+.Navigation-Home:hover{
     font-weight: bolder;
 }
 
