@@ -46,8 +46,20 @@ body {
   flex-direction: column;
 }
 
+.mt-2 {
+  margin-top: 20px;
+}
+
 .mt-4 {
   margin-top: 40px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.mb-4 {
+  margin-bottom: 40px;
 }
 
 .w-100 {
@@ -152,21 +164,21 @@ body {
   margin-top: -20px;
 }
 
-.merch-card-container {
+.inner-card-container {
   width: 300px;
   height: 475px;
   border-radius: 10px;
   background: #1e1e1e;
 }
 
-.merch-card-container > img {
+.inner-card-container > img {
   width: 300px;
   height: 250px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 
-.merch-card-desc > h3 {
+.inner-card-desc > h3 {
   color: #fff;
   text-align: center;
   font-family: Open Sans;
@@ -178,7 +190,18 @@ body {
   margin-bottom: -15px;
 }
 
-.merch-card-desc > p {
+.inner-card-desc > h2 {
+  color: #fff;
+  font-family: Orbitron;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+
+  margin-bottom: -15px;
+}
+
+.inner-card-desc > p {
   color: #fff;
   text-align: center;
   font-family: Open Sans;
@@ -189,7 +212,7 @@ body {
   margin-top: 20px;
 }
 
-.merch-card-desc > h4 {
+.inner-card-desc > h4 {
   color: #fff;
   text-align: center;
   font-family: Orbitron;
