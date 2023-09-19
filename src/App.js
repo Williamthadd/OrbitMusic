@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./Pages/Home";
 import Merch from "./Pages/Merch";
-import Cart from "./Pages/Payment";
+import Cart from "./Pages/Cart";
 import Services from "./Pages/Services";
 import Profile from "./Pages/Profile";
 import AboutUs from "./Pages/AboutUs";

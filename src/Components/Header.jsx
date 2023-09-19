@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Logo from "../Assets/Logo.jpg";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -23,21 +24,45 @@ const Header = () => {
           onClick={toggleHamburgerMenu}
         />
         <div className="nav-container flex ai-c">
-          <p className="nav ">Home</p>
-          <p className="nav ">About Us</p>
-          <p className="nav ">Payment</p>
-          <p className="nav ">Merch</p>
-          <p className="nav ">Services</p>
-          <p className="nav ">Profile</p>
+          <Link to="/*" className="nav">
+            Home
+          </Link>
+          <Link to="/about-us" className="nav">
+            About Us
+          </Link>
+          <Link to="/cart" className="nav">
+            Cart
+          </Link>
+          <Link to="/merch" className="nav">
+            Merch
+          </Link>
+          <Link to="/services" className="nav">
+            Services
+          </Link>
+          <Link to="/profile" className="nav">
+            Profile
+          </Link>
         </div>
         {navbar ? (
           <div className="nav-dropdown-container ai-c">
-            <p className="nav ">Home</p>
-            <p className="nav ">About Us</p>
-            <p className="nav ">Payment</p>
-            <p className="nav ">Merch</p>
-            <p className="nav ">Services</p>
-            <p className="nav ">Profile</p>
+            <Link to="/*" className="nav">
+              Home
+            </Link>
+            <Link to="/about-us" className="nav">
+              About Us
+            </Link>
+            <Link to="/cart" className="nav">
+              Cart
+            </Link>
+            <Link to="/merch" className="nav">
+              Merch
+            </Link>
+            <Link to="/services" className="nav">
+              Services
+            </Link>
+            <Link to="/profile" className="nav">
+              Profile
+            </Link>
           </div>
         ) : null}
       </div>

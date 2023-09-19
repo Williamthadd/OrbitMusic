@@ -1,16 +1,14 @@
-import React from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import MerchCardContainer from "../Elements/MerchCardContainer";
 
-const Merch = () => {
+export default function Cart() {
   return (
     <div className="container">
       <Header />
-      <MerchCardContainer />
+      <div className="flex jc-c page-title">
+        <h1>Cart</h1>
+      </div>
       <Footer />
     </div>
   );
-};
-
-export default Merch;
+}

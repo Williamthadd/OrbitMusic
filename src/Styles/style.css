@@ -30,6 +30,10 @@ body {
   justify-content: space-between;
 }
 
+.jc-c {
+  justify-content: center;
+}
+
 .ai-c {
   align-items: center;
 }
@@ -44,6 +48,11 @@ body {
 
 .mt-4 {
   margin-top: 40px;
+}
+
+.w-100 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Dibawah ini custom CSS*/
@@ -78,6 +87,8 @@ body {
 .nav {
   display: block;
   cursor: default;
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav:not(.nav-active):hover {
@@ -206,6 +217,16 @@ body {
 
 .button1:hover {
   background: #525d92;
+}
+
+.page-title {
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .card-container {
