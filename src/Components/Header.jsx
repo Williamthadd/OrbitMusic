@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         {navbar ? (
           <div className="nav-dropdown-container ai-c">
-            <p className="nav nav-active">Home</p>
+            <p className="nav ">Home</p>
             <p className="nav ">About Us</p>
             <p className="nav ">Payment</p>
             <p className="nav ">Merch</p>

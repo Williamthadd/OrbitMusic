@@ -141,6 +141,101 @@ body {
   margin-top: -20px;
 }
 
+.merch-card-container {
+  width: 300px;
+  height: 475px;
+  border-radius: 10px;
+  background: #1e1e1e;
+}
+
+.merch-card-container > img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.merch-card-desc > h3 {
+  color: #fff;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+
+  margin-bottom: -15px;
+}
+
+.merch-card-desc > p {
+  color: #fff;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+}
+
+.merch-card-desc > h4 {
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin-top: -5px;
+}
+
+.button1 {
+  min-width: 250px;
+  min-height: 45px;
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+  background: #6b79bd;
+  border: none;
+}
+
+.button1:hover {
+  background: #525d92;
+}
+
+.card-container {
+  gap: 15px;
+  overflow-x: scroll;
+}
+
+/* width */
+.card-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.card-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+/* Handle */
+.card-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+.card-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 2px;
+}
+
 /* Mobile UI*/
 @media only screen and (max-width: 800px) {
   .hamburger-icon {
