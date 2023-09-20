@@ -7,7 +7,7 @@ const PromotionDetail = () => {
   return (
     <div className='Service-Detail'>
       <Header></Header>
-      <p className='Title'>Services</p>
+      <h1 className='Service-Title'>Services</h1>
       <div className='Service-Detail-Card'>
         <img src={Promotion} alt='Promotion' className='Service-Image'></img>
         <div className='Service-Detail-Text'>
