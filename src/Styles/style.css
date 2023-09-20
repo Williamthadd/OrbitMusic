@@ -297,8 +297,7 @@ body {
     font-family: "Orbitron", sans-serif;
 }
 
-.Title{
-    font-size: 32px;
+.Service-Title{
     text-align: center;
 }
 
@@ -322,8 +321,6 @@ body {
     max-width: 1120px;
     margin: 0 auto;
     width: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
 }
 
 .Title-Services-Detail{
@@ -334,6 +331,7 @@ body {
     align-items: flex-start; 
     font-size: 24px;
     margin-top: 30px;
+    font-weight: bold;
 }
 
 .Description-Services-Detail{
