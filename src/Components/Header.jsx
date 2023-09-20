@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Logo from "../Assets/Logo.jpg";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -24,45 +24,53 @@ const Header = () => {
           onClick={toggleHamburgerMenu}
         />
         <div className="nav-container flex ai-c">
-          <Link to="/*" className="nav">
+          <NavLink to="/" activeClassName="nav-active" className="nav">
             Home
-          </Link>
-          <Link to="/about-us" className="nav">
+          </NavLink>
+          <NavLink to="/about-us" activeClassName="nav-active" className="nav">
             About Us
-          </Link>
-          <Link to="/cart" className="nav">
+          </NavLink>
+          <NavLink to="/cart" activeClassName="nav-active" className="nav">
             Cart
-          </Link>
-          <Link to="/merch" className="nav">
+          </NavLink>
+          <NavLink to="/merch" activeClassName="nav-active" className="nav">
             Merch
-          </Link>
-          <Link to="/services" className="nav">
+          </NavLink>
+          <NavLink to="/services" activeClassName="nav-active" className="nav">
             Services
-          </Link>
-          <Link to="/profile" className="nav">
+          </NavLink>
+          <NavLink to="/profile" activeClassName="nav-active" className="nav">
             Profile
-          </Link>
+          </NavLink>
         </div>
         {navbar ? (
           <div className="nav-dropdown-container ai-c">
-            <Link to="/*" className="nav">
+            <NavLink to="/home" activeClassName="nav-active" className="nav">
               Home
-            </Link>
-            <Link to="/about-us" className="nav">
+            </NavLink>
+            <NavLink
+              to="/about-us"
+              activeClassName="nav-active"
+              className="nav"
+            >
               About Us
-            </Link>
-            <Link to="/cart" className="nav">
+            </NavLink>
+            <NavLink to="/cart" activeClassName="nav-active" className="nav">
               Cart
-            </Link>
-            <Link to="/merch" className="nav">
+            </NavLink>
+            <NavLink to="/merch" activeClassName="nav-active" className="nav">
               Merch
-            </Link>
-            <Link to="/services" className="nav">
+            </NavLink>
+            <NavLink
+              to="/services"
+              activeClassName="nav-active"
+              className="nav"
+            >
               Services
-            </Link>
-            <Link to="/profile" className="nav">
+            </NavLink>
+            <NavLink to="/profile" activeClassName="nav-active" className="nav">
               Profile
-            </Link>
+            </NavLink>
           </div>
         ) : null}
       </div>

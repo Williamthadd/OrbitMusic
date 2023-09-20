@@ -1,4 +1,4 @@
-import Button1 from "./Button1";
+import LinkButton from "./LinkButton";
 
 export default function ServiceCard(props) {
   return (
@@ -11,7 +11,11 @@ export default function ServiceCard(props) {
       <div className="inner-card-desc flex fd-c ai-c mt-2">
         <h2>{props.title}</h2>
         <p className="mb-4">{props.desc}</p>
-        <Button1 text={"View More"} />
+        <LinkButton
+          text={"View More"}
+          target={props.title}
+          handleChangePage={props.handleChangePage}
+        />
       </div>
     </div>
   );

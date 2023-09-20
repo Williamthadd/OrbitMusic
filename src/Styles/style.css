@@ -110,6 +110,7 @@ body {
 .nav-active {
   text-decoration: underline;
   font-weight: 800;
+  background-color: red;
 }
 
 .Navigation {
@@ -242,6 +243,17 @@ body {
   background: #525d92;
 }
 
+.LinkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.LinkButton:hover {
+  cursor: pointer;
+}
+
 .page-title {
   color: #fff;
   text-align: center;
@@ -292,84 +304,82 @@ body {
 }
 
 /* Service Detail Design */
-.Service-Detail{
-    color: white;
-    font-family: "Orbitron", sans-serif;
+.Service-Detail {
+  color: white;
+  font-family: "Orbitron", sans-serif;
 }
 
-.Service-Title{
-    text-align: center;
+.Service-Title {
+  text-align: center;
 }
 
-.Service-Detail-Text{
-    float: left;
-    margin-left: 25px;
-    text-align: left;
+.Service-Detail-Text {
+  float: left;
+  margin-left: 25px;
+  text-align: left;
 }
 
-.Service-Image{
-    flex: 1; 
-    max-width: 204px;
+.Service-Image {
+  flex: 1;
+  max-width: 204px;
 }
 
-.Service-Detail-Card{
-    background-color: #1E1E1E;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
+.Service-Detail-Card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  width: auto;
+}
+
+.Title-Services-Detail {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  align-items: flex-start;
+  font-size: 24px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.Description-Services-Detail {
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 10%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.Price-Services-Detail {
+  font-size: 24px;
+}
+
+.Button-Services-Detail {
+  background-color: #6b79bd;
+  width: 440px;
+  height: 55px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+}
+
+@media screen and (max-width: 845px) {
+  .Service-Detail-Card {
+    flex-direction: column;
     align-items: center;
-    max-width: 1120px;
-    margin: 0 auto;
-    width: auto;
+  }
+
+  .Service-Image {
+    order: -1;
+    margin-top: 10px;
+  }
+
+  .Button-Services-Detail {
+    width: 80%;
+  }
 }
-
-.Title-Services-Detail{
-    flex: 1; 
-    display: flex;
-    justify-content:flex-start;
-    margin-top: 0;
-    align-items: flex-start; 
-    font-size: 24px;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-.Description-Services-Detail{
-    font-size: 16px;
-    margin-top: 0;
-    margin-right: 10%;
-    font-family: "Open Sans", sans-serif;
-    
-}
-
-.Price-Services-Detail{
-    font-size: 24px;
-}
-
-.Button-Services-Detail{
-    background-color: #6B79BD;
-    width: 440px;
-    height: 55px;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: white;
-    font-family: "Orbitron", sans-serif;
-}
-
-@media screen and (max-width: 845px){
-    .Service-Detail-Card {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .Service-Image{
-        order: -1; 
-        margin-top: 10px;
-    }
-
-    .Button-Services-Detail{
-        width: 80%;
-    }
-}
-
