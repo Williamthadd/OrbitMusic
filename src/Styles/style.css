@@ -383,3 +383,56 @@ body {
     width: 80%;
   }
 }
+
+/* About Us Design */
+.About-Us {
+  text-align: center;
+}
+
+.Gap-About-Us-Title{
+  margin-top: 35px;
+}
+
+.About-Us-Text{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: lighter;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.About-Us-Quote{
+  margin-top: 35px;
+}
+
+.What-Do-We-Do-Title{
+  margin-top: 120px;
+  margin-bottom: 35px;
+}
+
+.What-Do-We-Do-card{
+  background-color: #1E1E1E;
+  width: auto;
+  max-width: 280px;
+  border-radius: 10px;
+  height: 346px;
+  margin-bottom: 10px;
+  
+} 
+
+.What-Do-We-Do-card-image{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.What-Do-We-Do-card-title{
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.What-Do-We-Do-card-Position{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
