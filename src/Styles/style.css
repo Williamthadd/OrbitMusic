@@ -441,11 +441,11 @@ body {
   margin-bottom: 50px;
 }
 
-.Update-Profile-Box{
+.Profile-Box{
   background-color: #1E1E1E;
   border-radius: 10px;
   padding-top: 10px;
-  padding-left: 20px;
+  text-align: center;
 }
 
 .form-group-Update-Profile{
@@ -454,6 +454,6 @@ body {
 
 .Input-Profile{
   border-radius: 7px;
-  margin-left: 5px;
 }
+
 
