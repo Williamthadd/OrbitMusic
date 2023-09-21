@@ -38,6 +38,10 @@ body {
   align-items: center;
 }
 
+.ai-s {
+  align-items: flex-start;
+}
+
 .fd-r {
   flex-direction: row;
 }
@@ -60,6 +64,10 @@ body {
 
 .mb-4 {
   margin-bottom: 40px;
+}
+
+.mr-1 {
+  margin-right: 10px;
 }
 
 .w-100 {
@@ -127,6 +135,11 @@ body {
   justify-content: center;
 }
 
+.nav-mobile {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .socialmedia-logo > img {
   object-fit: contain;
 }
@@ -167,7 +180,10 @@ body {
 
 .inner-card-container {
   width: 300px;
-  height: 475px;
+  min-height: 475px;
+  max-height: none;
+  flex-wrap: wrap;
+
   border-radius: 10px;
   background: #1e1e1e;
 }
@@ -210,7 +226,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 20px;
 }
 
 .inner-card-desc > h4 {
@@ -237,6 +252,28 @@ body {
   border-radius: 10px;
   background: #6b79bd;
   border: none;
+}
+
+.card-p {
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-tags {
+  color: #fff;
+  font-family: Orbitron;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.tags-container {
+  flex-wrap: wrap;
 }
 
 .button1:hover {
@@ -266,12 +303,13 @@ body {
 
 .card-container {
   gap: 15px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 /* width */
 .card-container::-webkit-scrollbar {
-  width: 10px;
+  min-width: 10px;
+  max-width: none;
 }
 
 /* Track */
@@ -292,6 +330,65 @@ body {
   border-radius: 2px;
 }
 
+/* Home */
+.body-content {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+/* InputField */
+.searchBar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.searchBar {
+  width: 100%;
+  margin-right: auto;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clear-button {
+  border: none;
+  width: 30px;
+  outline: none;
+  background-color: white;
+}
+
+.clear-button:hover {
+  background-color: gray;
+}
+
+.searchBar > .searchInput {
+  outline: none;
+  border: none;
+  resize: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.searchBar-container > button {
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 1px;
+  background: #6b79bd;
+  border: none;
+  padding: 10px;
+}
+
+.searchBar-container > button:hover {
+  background: #525d92;
+}
+
 /* Mobile UI*/
 @media only screen and (max-width: 800px) {
   .hamburger-icon {
@@ -300,6 +397,15 @@ body {
 
   .nav-container {
     display: none;
+  }
+
+  .searchBar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .searchBar-container > button {
+    margin-top: 10px;
   }
 }
 
@@ -389,83 +495,82 @@ body {
   text-align: center;
 }
 
-.Gap-About-Us-Title{
+.Gap-About-Us-Title {
   margin-top: 35px;
 }
 
-.About-Us-Text{
+.About-Us-Text {
   font-family: Open Sans;
   font-style: normal;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.About-Us-Quote{
+.About-Us-Quote {
   margin-top: 35px;
 }
 
-.What-Do-We-Do-Title{
+.What-Do-We-Do-Title {
   margin-top: 120px;
   margin-bottom: 35px;
 }
 
-.What-Do-We-Do-card{
-  background-color: #1E1E1E;
+.What-Do-We-Do-card {
+  background-color: #1e1e1e;
   width: auto;
   max-width: 280px;
   border-radius: 10px;
   height: 346px;
   margin-bottom: 10px;
-  
-} 
+}
 
-.What-Do-We-Do-card-image{
+.What-Do-We-Do-card-image {
   width: 100%;
   border-radius: 10px;
 }
 
-.What-Do-We-Do-card-title{
+.What-Do-We-Do-card-title {
   font-size: 16px;
   font-weight: bold;
   margin-top: 40px;
 }
 
-.What-Do-We-Do-card-Position{
+.What-Do-We-Do-card-Position {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 /* Profile Design */
-.Profile-Data{
+.Profile-Data {
   margin-bottom: 50px;
 }
 
-.Profile-Box{
-  background-color: #1E1E1E;
+.Profile-Box {
+  background-color: #1e1e1e;
   border-radius: 10px;
   padding-top: 10px;
   text-align: center;
 }
 
-.Profile-Button2{
+.Profile-Button2 {
   background-color: #751c1c;
 }
 
-.Profile-Button2:hover{
+.Profile-Button2:hover {
   background-color: #591717;
 }
 
-.form-group-Profile{
+.form-group-Profile {
   margin-bottom: 30px;
 }
 
-.Input-Profile{
+.Input-Profile {
   border-radius: 7px;
 }
 
 /* Payment Successful Design */
-.Payment-Successful{
+.Payment-Successful {
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;

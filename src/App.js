@@ -17,6 +17,12 @@ import { useState } from "react";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [carts, setCarts] = useState([""]);
+
+  function handleChangeCarts(carts) {
+    setCarts(carts);
+  }
+
   function handleChangePage(text) {
     console.log(text);
     setCurrentPage(text);
@@ -28,7 +34,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/merch" element={<Merch />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart carts={carts} handleChangeCarts={handleChangeCarts} />
+            }
+          />
           <Route
             path="/services"
             element={<Services handleChangePage={handleChangePage} />}

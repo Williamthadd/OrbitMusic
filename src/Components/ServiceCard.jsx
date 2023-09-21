@@ -10,7 +10,7 @@ export default function ServiceCard(props) {
       ></img>
       <div className="inner-card-desc flex fd-c ai-c mt-2">
         <h2>{props.title}</h2>
-        <p className="mb-4">{props.desc}</p>
+        <p className="mb-4 mt-2">{props.desc}</p>
         <LinkButton
           text={"View More"}
           target={props.title}

@@ -45,30 +45,46 @@ const Header = () => {
         </div>
         {navbar ? (
           <div className="nav-dropdown-container ai-c">
-            <NavLink to="/home" activeClassName="nav-active" className="nav">
+            <NavLink
+              to="/"
+              activeClassName="nav-active"
+              className="nav nav-mobile"
+            >
               Home
             </NavLink>
             <NavLink
               to="/about-us"
               activeClassName="nav-active"
-              className="nav"
+              className="nav nav-mobile"
             >
               About Us
             </NavLink>
-            <NavLink to="/cart" activeClassName="nav-active" className="nav">
+            <NavLink
+              to="/cart"
+              activeClassName="nav-active"
+              className="nav nav-mobile"
+            >
               Cart
             </NavLink>
-            <NavLink to="/merch" activeClassName="nav-active" className="nav">
+            <NavLink
+              to="/merch"
+              activeClassName="nav-active"
+              className="nav nav-mobile"
+            >
               Merch
             </NavLink>
             <NavLink
               to="/services"
               activeClassName="nav-active"
-              className="nav"
+              className="nav nav-mobile"
             >
               Services
             </NavLink>
-            <NavLink to="/profile" activeClassName="nav-active" className="nav">
+            <NavLink
+              to="/profile"
+              activeClassName="nav-active"
+              className="nav nav-mobile"
+            >
               Profile
             </NavLink>
           </div>
