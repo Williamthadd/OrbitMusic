@@ -42,7 +42,7 @@ export default function Profile() {
       <div className="Profile-Box">
         <h2 className="Update-Profile-Title">Update Profile?</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group-Update-Profile">
+          <div className="form-group-Profile">
             <p htmlFor="username">Username:</p>
             <input
               className="Input-Profile"
@@ -53,7 +53,7 @@ export default function Profile() {
               onChange={handleInputChange}
             />
           </div>
-          <div className="form-group-Update-Profile">
+          <div className="form-group-Profile">
             <p htmlFor="email">Email:</p>
             <input
               className="Input-Profile"
@@ -64,7 +64,7 @@ export default function Profile() {
               onChange={handleInputChange}
             />
           </div>
-          <div className="form-group-Update-Profile">
+          <div className="form-group-Profile">
             <p htmlFor="password">Password:</p>
             <input
               className="Input-Profile"
@@ -75,7 +75,7 @@ export default function Profile() {
               onChange={handleInputChange}
             />
           </div>
-          <div className="form-group-Update-Profile">
+          <div className="form-group-Profile">
             <p htmlFor="phoneNumber">Phone Number:</p>
             <input
               className="Input-Profile"
@@ -86,10 +86,10 @@ export default function Profile() {
               onChange={handleInputChange}
             />
           </div>
-          <button type="submit" className="button1 form-group-Update-Profile">Update</button>
+          <button type="submit" className="button1 form-group-Profile">Update</button>
         </form>
         <Link to="/login">
-          <button className="button1 form-group-Update-Profile">LogOut</button>
+          <button className="button1 form-group-Profile Profile-Button2">LogOut</button>
         </Link>
         
       </div>
