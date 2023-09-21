@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const [formData, setFormData] = useState({
@@ -87,6 +88,10 @@ export default function Profile() {
           </div>
           <button type="submit" className="button1 form-group-Update-Profile">Update</button>
         </form>
+        <Link to="/login">
+          <button className="button1 form-group-Update-Profile">LogOut</button>
+        </Link>
+        
       </div>
 
       <Footer />
