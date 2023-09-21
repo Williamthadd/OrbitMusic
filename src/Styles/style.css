@@ -464,3 +464,9 @@ body {
   border-radius: 7px;
 }
 
+/* Payment Successful Design */
+.Payment-Successful{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
