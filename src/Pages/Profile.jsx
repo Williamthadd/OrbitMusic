@@ -27,7 +27,7 @@ export default function Profile() {
   //dummy
 
   return (
-    <div className="container">
+    <div>
       <Header />
       <div className="flex jc-c page-title">
         <h1>Profile</h1>
@@ -39,11 +39,11 @@ export default function Profile() {
         <p><b>Phone Number</b>: {phoneNumber}</p>
       </div>
 
-      <div className="Update-Profile-Box">
+      <div className="Profile-Box">
         <h2 className="Update-Profile-Title">Update Profile?</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group-Update-Profile">
-            <label htmlFor="username">Username:</label>
+            <p htmlFor="username">Username:</p>
             <input
               className="Input-Profile"
               type="text"
@@ -54,7 +54,7 @@ export default function Profile() {
             />
           </div>
           <div className="form-group-Update-Profile">
-            <label htmlFor="email">Email:</label>
+            <p htmlFor="email">Email:</p>
             <input
               className="Input-Profile"
               type="email"
@@ -65,7 +65,7 @@ export default function Profile() {
             />
           </div>
           <div className="form-group-Update-Profile">
-            <label htmlFor="password">Password:</label>
+            <p htmlFor="password">Password:</p>
             <input
               className="Input-Profile"
               type="password"
@@ -76,7 +76,7 @@ export default function Profile() {
             />
           </div>
           <div className="form-group-Update-Profile">
-            <label htmlFor="phoneNumber">Phone Number:</label>
+            <p htmlFor="phoneNumber">Phone Number:</p>
             <input
               className="Input-Profile"
               type="tel"
