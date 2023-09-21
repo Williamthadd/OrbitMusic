@@ -448,12 +448,19 @@ body {
   text-align: center;
 }
 
-.form-group-Update-Profile{
+.Profile-Button2{
+  background-color: #751c1c;
+}
+
+.Profile-Button2:hover{
+  background-color: #591717;
+}
+
+.form-group-Profile{
   margin-bottom: 30px;
 }
 
 .Input-Profile{
   border-radius: 7px;
 }
-
 
