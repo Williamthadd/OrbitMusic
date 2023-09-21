@@ -435,3 +435,25 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+/* Profile Design */
+.Profile-Data{
+  margin-bottom: 50px;
+}
+
+.Update-Profile-Box{
+  background-color: #1E1E1E;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.form-group-Update-Profile{
+  margin-bottom: 30px;
+}
+
+.Input-Profile{
+  border-radius: 7px;
+  margin-left: 5px;
+}
+
