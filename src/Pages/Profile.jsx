@@ -54,6 +54,7 @@ export default function Profile(props) {
           <div className="form-group-Profile">
             <p htmlFor="username">Username:</p>
             <input
+              placeholder="Username..."
               className="Input-Profile"
               type="text"
               id="username"
@@ -65,6 +66,7 @@ export default function Profile(props) {
           <div className="form-group-Profile">
             <p htmlFor="email">Email:</p>
             <input
+              placeholder="Email..."
               className="Input-Profile"
               type="email"
               id="email"
@@ -76,6 +78,7 @@ export default function Profile(props) {
           <div className="form-group-Profile">
             <p htmlFor="password">Password:</p>
             <input
+              placeholder="Password..."
               className="Input-Profile"
               type="password"
               id="password"
@@ -87,6 +90,7 @@ export default function Profile(props) {
           <div className="form-group-Profile">
             <p htmlFor="phoneNumber">Phone Number:</p>
             <input
+              placeholder="Phone Number..."
               className="Input-Profile"
               type="tel"
               id="phoneNumber"
@@ -101,7 +105,7 @@ export default function Profile(props) {
         </form>
         <Link to="/login">
           <button className="button1 form-group-Profile Profile-Button2">
-            LogOut
+            Logout
           </button>
         </Link>
       </div>
