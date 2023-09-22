@@ -7,7 +7,7 @@ import SearchSongCardContainer from "../Elements/SearchSongCardContainer";
 import Songs from "../Data/SongData";
 import SongCard from "../Components/SongCard";
 
-const Home = () => {
+const Home = (props) => {
   const [searchValue, setSearchValue] = useState("");
   const [isSearchingSomething, setIsSearchingSomething] = useState(false);
 
@@ -21,7 +21,10 @@ const Home = () => {
 
   return (
     <div className="container">
-      <Header />
+      <Header
+        currentPage={props.currentPage}
+        handleChangePage={props.handleChangePage}
+      />
       <div className="flex jc-c page-title fd-c">
         <h1>Home</h1>
         <div className="body-content flex fd-c ai-s">

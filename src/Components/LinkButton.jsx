@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
 
-export default function Button1({ text, target, handleChangePage }) {
+export default function LinkButton({
+  text,
+  target,
+  handleChangeServices,
+  linkTo,
+}) {
   return (
     <Link
       className="button1 LinkButton"
-      to="/services/details"
-      onClick={() => handleChangePage(target)}
+      to={linkTo}
+      onClick={() => handleChangeServices(target)}
     >
       {text}
     </Link>

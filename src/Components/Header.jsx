@@ -4,7 +4,7 @@ import Logo from "../Assets/Logo.jpg";
 import { Icon } from "@iconify/react";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   const [navbar, setNavbar] = useState(false);
 
   function toggleHamburgerMenu() {
@@ -24,22 +24,50 @@ const Header = () => {
           onClick={toggleHamburgerMenu}
         />
         <div className="nav-container flex ai-c">
-          <NavLink to="/" activeClassName="nav-active" className="nav">
+          <NavLink
+            to="/"
+            className={`nav ${props.currentPage === "home" && "nav-active"}`}
+            onClick={() => props.handleChangePage("home")}
+          >
             Home
           </NavLink>
-          <NavLink to="/about-us" activeClassName="nav-active" className="nav">
+          <NavLink
+            to="/about-us"
+            className={`nav ${
+              props.currentPage === "about-us" && "nav-active"
+            }`}
+            onClick={() => props.handleChangePage("about-us")}
+          >
             About Us
           </NavLink>
-          <NavLink to="/cart" activeClassName="nav-active" className="nav">
+          <NavLink
+            to="/cart"
+            className={`nav ${props.currentPage === "cart" && "nav-active"}`}
+            onClick={() => props.handleChangePage("cart")}
+          >
             Cart
           </NavLink>
-          <NavLink to="/merch" activeClassName="nav-active" className="nav">
+          <NavLink
+            to="/merch"
+            className={`nav ${props.currentPage === "merch" && "nav-active"}`}
+            onClick={() => props.handleChangePage("merch")}
+          >
             Merch
           </NavLink>
-          <NavLink to="/services" activeClassName="nav-active" className="nav">
+          <NavLink
+            to="/services"
+            className={`nav ${
+              props.currentPage === "services" && "nav-active"
+            }`}
+            onClick={() => props.handleChangePage("services")}
+          >
             Services
           </NavLink>
-          <NavLink to="/profile" activeClassName="nav-active" className="nav">
+          <NavLink
+            to="/profile"
+            className={`nav ${props.currentPage === "profile" && "nav-active"}`}
+            onClick={() => props.handleChangePage("profile")}
+          >
             Profile
           </NavLink>
         </div>
@@ -47,43 +75,55 @@ const Header = () => {
           <div className="nav-dropdown-container ai-c">
             <NavLink
               to="/"
-              activeClassName="nav-active"
-              className="nav nav-mobile"
+              className={`nav nav-mobile ${
+                props.currentPage === "home" && "nav-active"
+              }`}
+              onClick={() => props.handleChangePage("home")}
             >
               Home
             </NavLink>
             <NavLink
               to="/about-us"
-              activeClassName="nav-active"
-              className="nav nav-mobile"
+              className={`nav nav-mobile ${
+                props.currentPage === "about-us" && "nav-active"
+              }`}
+              onClick={() => props.handleChangePage("about-us")}
             >
               About Us
             </NavLink>
             <NavLink
               to="/cart"
-              activeClassName="nav-active"
-              className="nav nav-mobile"
+              className={`nav nav-mobile ${
+                props.currentPage === "cart" && "nav-active"
+              }`}
+              onClick={() => props.handleChangePage("cart")}
             >
               Cart
             </NavLink>
             <NavLink
               to="/merch"
-              activeClassName="nav-active"
-              className="nav nav-mobile"
+              className={`nav nav-mobile ${
+                props.currentPage === "merch" && "nav-active"
+              }`}
+              onClick={() => props.handleChangePage("merch")}
             >
               Merch
             </NavLink>
             <NavLink
               to="/services"
-              activeClassName="nav-active"
-              className="nav nav-mobile"
+              className={`nav nav-mobile ${
+                props.currentPage === "services" && "nav-active"
+              }`}
+              onClick={() => props.handleChangePage("services")}
             >
               Services
             </NavLink>
             <NavLink
               to="/profile"
-              activeClassName="nav-active"
-              className="nav nav-mobile"
+              className={`nav nav-mobile ${
+                props.currentPage === "profile" && "nav-active"
+              }`}
+              onClick={() => props.handleChangePage("profile")}
             >
               Profile
             </NavLink>

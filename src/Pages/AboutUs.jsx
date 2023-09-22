@@ -7,10 +7,13 @@ import MusicConsulting from "../Assets/MusicConsulting.jpg";
 import TalentManagement from "../Assets/TalentManagement.jpg";
 import EventOrganizer from "../Assets/EventOrganizer.jpg";
 
-const AboutUs = () => {
+const AboutUs = (props) => {
   return (
     <div className="container">
-      <Header />
+      <Header
+        currentPage={props.currentPage}
+        handleChangePage={props.handleChangePage}
+      />
       <div className="About-Us">
         <h1>About Us</h1>
         <p className="About-Us-Text Gap-About-Us-Title">

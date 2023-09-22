@@ -11,7 +11,7 @@ export default function ServiceCardContainer(props) {
           title={item.title}
           desc={item.desc}
           link={item.link}
-          handleChangePage={props.handleChangePage}
+          handleChangeServices={props.handleChangeServices}
         />
       ))}
     </div>

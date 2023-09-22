@@ -14,7 +14,8 @@ export default function ServiceCard(props) {
         <LinkButton
           text={"View More"}
           target={props.title}
-          handleChangePage={props.handleChangePage}
+          handleChangeServices={props.handleChangeServices}
+          linkTo={"/services/details"}
         />
       </div>
     </div>

@@ -118,7 +118,6 @@ body {
 .nav-active {
   text-decoration: underline;
   font-weight: 800;
-  background-color: red;
 }
 
 .Navigation {

@@ -2,18 +2,25 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { findServiceByTitle } from "../Utils/find";
 import { formatNumberToK } from "../Utils/convert";
+import LinkButton from "../Components/LinkButton";
 
 export default function ServiceDetails(props) {
-  const selectedService = findServiceByTitle(props.currentPage);
+  const selectedService = findServiceByTitle(props.currentServices);
 
   return (
     <div className="container">
-      <Header />
+      <Header
+        currentPage={props.currentPage}
+        handleChangePage={props.handleChangePage}
+      />
       <div className="flex jc-c page-title">
         <h1>Services</h1>
       </div>
 
-      <div className="Service-Detail-Card">
+      <div
+        className="Service-Detail-Card"
+        style={{ paddingBottom: "30px", paddingRight: "30px" }}
+      >
         <img
           src={selectedService.image}
           alt="Promotion"
@@ -30,7 +37,7 @@ export default function ServiceDetails(props) {
           <p className="Price-Services-Detail">
             IDR {formatNumberToK(selectedService.price)}
           </p>
-          <button className="Button-Services-Detail">Add To Cart</button>
+          <LinkButton text={"Add To Cart"}></LinkButton>
         </div>
       </div>
       <Footer />

@@ -3,7 +3,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 
-export default function Profile() {
+export default function Profile(props) {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -28,15 +28,24 @@ export default function Profile() {
 
   return (
     <div>
-      <Header />
+      <Header
+        currentPage={props.currentPage}
+        handleChangePage={props.handleChangePage}
+      />
       <div className="flex jc-c page-title">
         <h1>Profile</h1>
       </div>
 
       <div className="Profile-Data">
-        <p><b>Username</b>: {username}</p> 
-        <p><b>Email</b>: {email}</p>
-        <p><b>Phone Number</b>: {phoneNumber}</p>
+        <p>
+          <b>Username</b>: {username}
+        </p>
+        <p>
+          <b>Email</b>: {email}
+        </p>
+        <p>
+          <b>Phone Number</b>: {phoneNumber}
+        </p>
       </div>
 
       <div className="Profile-Box">
@@ -86,12 +95,15 @@ export default function Profile() {
               onChange={handleInputChange}
             />
           </div>
-          <button type="submit" className="button1 form-group-Profile">Update</button>
+          <button type="submit" className="button1 form-group-Profile">
+            Update
+          </button>
         </form>
         <Link to="/login">
-          <button className="button1 form-group-Profile Profile-Button2">LogOut</button>
+          <button className="button1 form-group-Profile Profile-Button2">
+            LogOut
+          </button>
         </Link>
-        
       </div>
 
       <Footer />

@@ -6,11 +6,14 @@ import ServiceCardContainer from "../Elements/ServiceCardContainer";
 const Services = (props) => {
   return (
     <div className="container">
-      <Header />
+      <Header
+        currentPage={props.currentPage}
+        handleChangePage={props.handleChangePage}
+      />
       <div className="flex jc-c page-title">
         <h1>Services</h1>
       </div>
-      <ServiceCardContainer handleChangePage={props.handleChangePage} />
+      <ServiceCardContainer handleChangeServices={props.handleChangeServices} />
       <Footer />
     </div>
   );
