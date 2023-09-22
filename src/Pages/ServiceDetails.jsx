@@ -32,6 +32,9 @@ export default function ServiceDetails(props) {
             {selectedService.details}
           </p>
           <p className="Description-Services-Detail">
+              <b>You will get</b>: {selectedService.YouWillGet}
+          </p>
+          <p className="Description-Services-Detail">
             <b>Requirement</b>: {selectedService.requirements}
           </p>
           <p className="Price-Services-Detail">

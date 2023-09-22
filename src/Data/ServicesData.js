@@ -1,64 +1,102 @@
 const Services = [
   {
     id: 0,
-    image: "/Assets/PromotionLogo.png",
-    title: "Promotion",
-    desc: "Advertise your song in social media!",
-    link: "/services/Promotion",
+    image: "/Assets/InstagramPromotion.png",
+    title: "Instagram Promotion",
+    desc: "Advertise your song on Instagram ads!",
+    link: "/services/InstagramPromotion",
     details:
-      "We will advertise your music to 4 social media platforms ( <b>Instagram, YouTube, and Tiktok</b>) by applying a comprehensive and targeted marketing strategy. Our team of experienced digital marketing specialists will create engaging and eye-catching content, optimize your posts for each platform's algorithm, and strategically schedule posts to maximize visibility and engagement. Additionally, we will leverage paid advertising campaigns and data analytics to ensure your music reaches the widest and most relevant audience possible, helping you gain the recognition and exposure you deserve.",
+      "We offer a personalized social media strategy tailored to your music genre, captivating visual content creation, strategic Instagram Ad campaigns, a consistent content calendar, and detailed analytics to track your progress. With our service, you'll enjoy increased visibility, authentic engagement, boosted streams and downloads, enhanced artist branding, and the chance to connect with industry professionals and influencers. Don't miss out on the opportunity to take your music to the next level - contact us today and let's kickstart your music promotion journey! 🎶",
+    YouWillGet:
+      "Increased visibility for higher audience, authentic engagement to instagram profile, and boosted streams",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 800000,
+    price: 250000,
   },
   {
     id: 1,
-    image: "/Assets/ProducingLogo.png",
-    title: "Attribute Design",
-    desc: "Design your song attribute here!",
-    link: "/services/ProducingLogo.png",
+    image: "/Assets/YoutubePromotion.png",
+    title: "Youtube Promotion",
+    desc: "Advertise your song on Youtube ads!",
+    link: "/services/YoutubePromotion",
     details:
-      "We will design your music attributes and branding to resonate with your target audience, creating a cohesive and memorable identity that sets you apart in the music industry. Our creative team will work closely with you to develop a unique visual style, logo, and album artwork that reflect your music's essence and connect with your fans on a deeper level. This branding will not only enhance your online presence but also leave a lasting impression on your listeners, helping to foster a strong and loyal fan base for your music career.",
+      "Our tailored promotion service is designed to elevate your YouTube presence. We craft personalized strategies, optimize your video content for maximum engagement, and utilize targeted advertising campaigns to ensure your videos are seen by the right audience. With our assistance, you'll witness increased views, more subscribers, and a flourishing online community. Don't miss out on the opportunity to make your mark on the YouTube landscape - partner with us today and let's make your content shine! 🎥🚀",
+    YouWillGet:
+      "Increased visibility for higher audience, authentic engagement to youtube channel, and boosted streams",
     requirements:
-      "Design can't contain hate speech, racism, or any kind of discrimination",
-    price: 500000,
+      "Music can't contain hate speech, racism, or any kind of discrimination",
+    price: 450000,
   },
   {
     id: 2,
-    image: "/Assets/ConsultingLogo.png",
-    title: "Consulting",
-    desc: "Consult your song with us!",
-    link: "/services/Consulting",
+    image: "/Assets/SpotifyPromotion.png",
+    title: "Spotify Promotion",
+    desc: "Advertise your song on Spotify ads!",
+    link: "/services/SpotifyPromotion",
     details:
-      "If you need consultation about your music, you can just reach out to our experienced team of music industry experts. We offer personalized guidance and insights tailored to your specific goals and challenges. Whether you're looking for advice on songwriting, production, marketing strategies, or navigating the complexities of the music business, our dedicated consultants are here to provide you with the knowledge and support you need to succeed. Simply contact us, and we'll schedule a consultation to address your concerns and help you make informed decisions to advance your music career.",
+      "We specialize in crafting customized strategies that boost your tracks' visibility, drive streams, and garner the attention they deserve. Our team works diligently to secure prime placements on Spotify playlists, implement targeted advertising campaigns, and engage with your audience authentically. With our service, your music will resonate with a wider audience, ultimately leading to increased followers and a stronger presence on the platform. Don't let your music go unnoticed; partner with us today to take your Spotify journey to the next level! 🎵📈",
+    YouWillGet:
+      "Increased visibility for higher listener, authentic engagement to spotify profile, and boosted streams & downloads",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 550000,
+    price: 4000000,
   },
   {
     id: 3,
-    image: "/Assets/ProducingLogo.png",
-    title: "Music Video Producing",
-    desc: "Make your Music Video with us!",
-    link: "/services/Producing",
+    image: "/Assets/TiktokPromotion.png",
+    title: "Tiktok Promotion",
+    desc: "Advertise your song on Tiktok ads!",
+    link: "/services/TiktokPromotion",
     details:
-      "We can edit your music video to ensure it aligns perfectly with your artistic vision and enhances the overall impact of your music. Our skilled video editors will bring creativity and technical expertise to the table, crafting visuals that captivate your audience and complement your music's narrative. Furthermore, if you're looking for lyrical expertise or assistance with songwriting, we can also serve as your ghostwriter. Our team of talented wordsmiths can collaborate with you to create compelling lyrics that convey your message and emotions with authenticity and finesse.",
+      "Our team leverages trending challenges, captivating content creation, and strategic advertising to ensure your videos reach a wider and more engaged viewership. With our assistance, you'll experience heightened visibility, increased followers, and a surge in user engagement. Don't miss out on the chance to go viral and captivate TikTok's massive user base - join us today and let's propel your TikTok journey to stardom! 🚀🎥",
+    YouWillGet:
+      "Increased visibility for higher audience, authentic engagement to Tiktok account, and boosted streams",
+    requirements:
+      "Music can't contain hate speech, racism, or any kind of discrimination",
+    price: 300000,
+  },
+  {
+    id: 4,
+    image: "/Assets/LitePackage.png",
+    title: "Lite Package",
+    desc: "Boost your ads on 2 social medias!",
+    link: "/services/LitePackage",
+    details:
+      "By combining Instagram's visual appeal with TikTok's short-form video charm, we create a comprehensive strategy that resonates across both platforms. Our dedicated team crafts engaging content, tailored to each platform's unique audience, and executes strategic advertising campaigns to amplify your message. With this bundle, you'll enjoy heightened visibility, increased followers, and a powerful impact on two of the most influential social media platforms today.",
+    YouWillGet:
+      "Song promoted on Instagram and Tiktok. Also, we will put your song on our Spotify playlist",
+    requirements:
+      "Music can't contain hate speech, racism, or any kind of discrimination",
+    price: 500000,
+  },
+  {
+    id: 5,
+    image: "/Assets/BandPackage.png",
+    title: "Band Package",
+    desc: "Boost your ads on 3 social medias!",
+    link: "/services/BandPackage",
+    details:
+      "We seamlessly combine the visual allure of Instagram, the short-form creativity of TikTok, and the immersive storytelling of YouTube to create a comprehensive strategy that resonates across all three platforms. Our dedicated team tailors content to each platform's unique audience, ensuring maximum engagement, and deploys strategic advertising campaigns that amplify your message to a vast and diverse audience.",
+    YouWillGet:
+      "Song promoted on Instagram, Tiktok, and Youtube. Also, we will put your song on our Spotify playlist, Instagram reels, and Tiktok post",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
     price: 950000,
   },
   {
-    id: 4,
-    image: "/Assets/ManagementLogo.png",
-    title: "Talent Management",
-    desc: "Be the best musician with us!",
-    link: "/services/TalentManagement",
+    id: 6,
+    image: "/Assets/CelebrityPackage.png",
+    title: "Celebrity Package",
+    desc: "Boost your ads on 4 social medias!",
+    link: "/services/CelebrityPackage",
     details:
-      "Join our music agency, and unlock a world of opportunities to propel your music career to new heights. With our extensive network, industry expertise, and a dedicated team of professionals, you'll gain access to invaluable resources and support tailored to your unique musical journey. We're not just an agency; we're your partners in success. Together, we'll navigate the music industry's complexities, expand your fan base, and help you achieve your dreams. Join us today, and let's make your music aspirations a reality.",
+      "We seamlessly merge Instagram's visual charm, TikTok's short-form creativity, YouTube's immersive storytelling, and Spotify's music streaming prowess to create an expansive strategy that resonates across all four platforms. Our dedicated team crafts content specifically tailored to each platform's unique audience, ensuring maximum engagement, and executes precise advertising campaigns that amplify your message to a vast and diverse audience.",
+    YouWillGet:
+      "Song promoted on Instagram, Tiktok, Youtube, and Spotify. Also, we will put your song on our Spotify playlist, Instagram reels, Tiktok post, and Youtube channel",
     requirements:
-      "Must be willing to take part in training for 6 months after passing the test",
-    price: 400000,
-  },
+      "Music can't contain hate speech, racism, or any kind of discrimination",
+    price: 4500000,
+  }
 ];
 
 export default Services;
