@@ -41,7 +41,7 @@ const Home = () => {
 
           <div className="flex fd-c ai-s">
             <h4>Recommendation</h4>
-            <div className="flex card-container" style={{ width: "908px" }}>
+            <div className="flex card-container" style={{ width: "63vw" }}>
               {Songs.filter((song) => song.tags.includes("Promoted")).map(
                 (song) => (
                   <SongCard
@@ -59,7 +59,7 @@ const Home = () => {
 
           <div className="flex fd-c ai-s">
             <h4>Trending</h4>
-            <div className="flex card-container" style={{ width: "908px" }}>
+            <div className="flex card-container" style={{ width: "63vw" }}>
               {Songs.filter((song) => song.tags.includes("Trending")).map(
                 (song) => (
                   <SongCard

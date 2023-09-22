@@ -9,7 +9,7 @@ export default function SearchSongCardContainer(props) {
   }
 
   return (
-    <div className="card-container flex" style={{ width: "908px" }}>
+    <div className="card-container flex" style={{ width: "63vw" }}>
       {songs.map((song) => (
         <SongCard
           key={song.id}
