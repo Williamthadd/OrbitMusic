@@ -566,6 +566,8 @@ body {
 
 .Input-Profile {
   border-radius: 7px;
+  height: 30px;
+  width: 250px;
 }
 
 /* Payment Successful Design */
