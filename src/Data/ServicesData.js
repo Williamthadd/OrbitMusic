@@ -11,7 +11,11 @@ const Services = [
       "Increased visibility for higher audience, authentic engagement to instagram profile, and boosted streams",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 250000,
+    package: [
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+    ],
   },
   {
     id: 1,
@@ -25,7 +29,11 @@ const Services = [
       "Increased visibility for higher audience, authentic engagement to youtube channel, and boosted streams",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 450000,
+    package: [
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+    ],
   },
   {
     id: 2,
@@ -39,7 +47,11 @@ const Services = [
       "Increased visibility for higher listener, authentic engagement to spotify profile, and boosted streams & downloads",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 4000000,
+    package: [
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+    ],
   },
   {
     id: 3,
@@ -53,7 +65,11 @@ const Services = [
       "Increased visibility for higher audience, authentic engagement to Tiktok account, and boosted streams",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 300000,
+    package: [
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+    ],
   },
   {
     id: 4,
@@ -67,7 +83,11 @@ const Services = [
       "Song promoted on Instagram and Tiktok. Also, we will put your song on our Spotify playlist",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 500000,
+    package: [
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+    ],
   },
   {
     id: 5,
@@ -81,7 +101,11 @@ const Services = [
       "Song promoted on Instagram, Tiktok, and Youtube. Also, we will put your song on our Spotify playlist, Instagram reels, and Tiktok post",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 950000,
+    package: [
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+    ],
   },
   {
     id: 6,
@@ -95,8 +119,12 @@ const Services = [
       "Song promoted on Instagram, Tiktok, Youtube, and Spotify. Also, we will put your song on our Spotify playlist, Instagram reels, Tiktok post, and Youtube channel",
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
-    price: 4500000,
-  }
+    package: [
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+    ],
+  },
 ];
 
 export default Services;

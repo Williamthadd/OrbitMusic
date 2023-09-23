@@ -7,6 +7,7 @@ export default function ServiceCardContainer(props) {
       {Services.map((item) => (
         <ServiceCard
           key={item.id}
+          id={item.id}
           image={item.image}
           title={item.title}
           desc={item.desc}

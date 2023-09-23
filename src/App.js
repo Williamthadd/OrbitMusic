@@ -10,6 +10,7 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 
 import ServiceDetails from "./Pages/ServiceDetails";
+import { findServiceByID } from "./Utils/find";
 
 import "./Styles/style.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -17,11 +18,20 @@ import { useState } from "react";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
-  const [currentServices, setCurrentServices] = useState("");
-  const [carts, setCarts] = useState([""]);
+  const [currentServices, setCurrentServices] = useState(0);
+  const [carts, setCarts] = useState([]);
 
-  function handleChangeCarts(carts) {
-    setCarts(carts);
+  function handleChangeCarts(service) {
+    const foundService = findServiceByID(service);
+    console.log(foundService);
+
+    if (foundService) {
+      // Check if the service was found before adding it to the cart
+      setCarts([...carts, foundService.id]);
+    } else {
+      // Handle the case where the service was not found
+      console.error(`Service with id "${service}" not found.`);
+    }
   }
 
   function handleChangePage(text) {
@@ -130,6 +140,7 @@ function App() {
                 currentServices={currentServices}
                 currentPage={currentPage}
                 handleChangePage={handleChangePage}
+                handleChangeCarts={handleChangeCarts}
               />
             }
           />

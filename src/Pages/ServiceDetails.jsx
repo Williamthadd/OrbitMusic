@@ -1,11 +1,11 @@
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import { findServiceByTitle } from "../Utils/find";
-import { formatNumberToK } from "../Utils/convert";
+import { findServiceByID } from "../Utils/find";
+// import { formatNumberToK } from "../Utils/convert";
 import LinkButton from "../Components/LinkButton";
 
 export default function ServiceDetails(props) {
-  const selectedService = findServiceByTitle(props.currentServices);
+  const selectedService = findServiceByID(props.currentServices);
 
   return (
     <div className="container">
@@ -32,15 +32,20 @@ export default function ServiceDetails(props) {
             {selectedService.details}
           </p>
           <p className="Description-Services-Detail">
-              <b>You will get</b>: {selectedService.YouWillGet}
+            <b>You will get</b>: {selectedService.YouWillGet}
           </p>
           <p className="Description-Services-Detail">
             <b>Requirement</b>: {selectedService.requirements}
           </p>
-          <p className="Price-Services-Detail">
+          {/* <p className="Price-Services-Detail">
             IDR {formatNumberToK(selectedService.price)}
-          </p>
-          <LinkButton text={"Add To Cart"}></LinkButton>
+          </p> */}
+          <LinkButton
+            text={"Add To Cart"}
+            handleSomething={props.handleChangeCarts}
+            target={selectedService.id}
+            linkTo={"/cart"}
+          ></LinkButton>
         </div>
       </div>
       <Footer />
