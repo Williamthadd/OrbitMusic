@@ -2,19 +2,24 @@ import { findPackagePrice } from "../Utils/find";
 import DropdownSelect from "./DropdownSelect";
 import { useState } from "react";
 
-export default function CartCard({ service, initialPrice, handleChangePrice }) {
-  const [selectedPackage, setSelectedPackage] = useState(
-    service.package[0].packname
-  );
+export default function CartCard({
+  service,
+  initialPrice,
+  handleChangePrice,
+  pack,
+  handlePackageChange,
+}) {
+  const [selectedPackage, setSelectedPackage] = useState(pack);
 
   // Callback function to handle package selection
-  const handlePackageChange = (selectedValue) => {
+  const changePackage = (selectedValue) => {
     console.log(selectedValue);
     handleChangePrice(
       initialPrice -
         findPackagePrice(service.id, selectedPackage) +
         findPackagePrice(service.id, selectedValue)
     );
+    handlePackageChange(service.id, selectedValue);
     setSelectedPackage(selectedValue);
   };
 
@@ -37,14 +42,18 @@ export default function CartCard({ service, initialPrice, handleChangePrice }) {
               value: packageOption.packname,
               label: packageOption.packdesc,
             }))}
-            onChange={handlePackageChange}
+            onChange={changePackage}
             text="Select Package"
             defaultValue={selectedPackage}
           />
         </div>
         <div className="flex fd-c ai-e">
           <div>IDR</div>
-          <div>{findPackagePrice(service.id, selectedPackage)}</div>
+          <div>
+            {findPackagePrice(service.id, selectedPackage) !== null
+              ? findPackagePrice(service.id, selectedPackage)
+              : "0"}
+          </div>
         </div>
       </div>
     </div>

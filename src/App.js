@@ -20,14 +20,39 @@ function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [currentServices, setCurrentServices] = useState(0);
   const [carts, setCarts] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const handleChangePrice = (newPrice) => {
+    setTotalPrice(newPrice);
+  };
+
+  function handlePackageChange(service, pack) {
+    const serviceIndex = carts.findIndex((cart) => cart.serv === service);
+    console.log(serviceIndex);
+    console.log(carts[serviceIndex]);
+
+    // Change service package in carts
+    if (serviceIndex !== -1) {
+      setCarts([
+        ...carts.slice(0, serviceIndex),
+        { serv: service, pack: pack },
+        ...carts.slice(serviceIndex + 1),
+      ]);
+    }
+  }
 
   function handleChangeCarts(service) {
     const foundService = findServiceByID(service);
+    // const serviceIndex = carts.findIndex((cart) => cart.serv === service);
     console.log(foundService);
 
     if (foundService) {
       // Check if the service was found before adding it to the cart
-      setCarts([...carts, foundService.id]);
+      setCarts([
+        ...carts,
+        { serv: foundService.id, pack: foundService.package[0].packname },
+      ]);
+      handleChangePrice(totalPrice + foundService.package[0].price);
     } else {
       // Handle the case where the service was not found
       console.error(`Service with id "${service}" not found.`);
@@ -75,6 +100,9 @@ function App() {
                 handleChangePage={handleChangePage}
                 carts={carts}
                 handleChangeCarts={handleChangeCarts}
+                totalPrice={totalPrice}
+                handleChangePrice={handleChangePrice}
+                handlePackageChange={handlePackageChange}
               />
             }
           />
