@@ -1,3 +1,4 @@
+import { formatNumberToK } from "../Utils/convert";
 import { findPackagePrice } from "../Utils/find";
 import DropdownSelect from "./DropdownSelect";
 import { useState } from "react";
@@ -8,6 +9,7 @@ export default function CartCard({
   handleChangePrice,
   pack,
   handlePackageChange,
+  handleDeleteCart,
 }) {
   const [selectedPackage, setSelectedPackage] = useState(pack);
 
@@ -36,7 +38,7 @@ export default function CartCard({
       />
       <div className="flex jc-sb w-100 cart-card-price">
         <div className="flex ai-s fd-c">
-          <div>{service.title}</div>
+          <div className="mb-1">{service.title}</div>
           <DropdownSelect
             options={service.package.map((packageOption) => ({
               value: packageOption.packname,
@@ -46,12 +48,40 @@ export default function CartCard({
             text="Select Package"
             defaultValue={selectedPackage}
           />
+          <button
+            className="button1 mt-2"
+            onClick={() => handleDeleteCart(service.id)}
+          >
+            Delete from cart
+          </button>
         </div>
-        <div className="flex fd-c ai-e">
-          <div>IDR</div>
-          <div>
+        <div className="price-card flex fd-c ai-e jc-c mr-4">
+          <div
+            className=""
+            style={{
+              color: "#FFF",
+              fontFamily: "Open Sans",
+              fontSize: "24px",
+              fontStyle: "normal",
+              fontWeight: "400",
+              lineHeight: "normal",
+            }}
+          >
+            IDR
+          </div>
+          <div
+            style={{
+              color: "#FFF",
+              fontFamily: "Open Sans",
+              fontSize: "32px",
+              fontStyle: "normal",
+              fontWeight: "700",
+              lineHeight: "normal",
+              marginTop: "-5px",
+            }}
+          >
             {findPackagePrice(service.id, selectedPackage) !== null
-              ? findPackagePrice(service.id, selectedPackage)
+              ? formatNumberToK(findPackagePrice(service.id, selectedPackage))
               : "0"}
           </div>
         </div>

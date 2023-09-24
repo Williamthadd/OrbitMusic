@@ -10,7 +10,7 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 
 import ServiceDetails from "./Pages/ServiceDetails";
-import { findServiceByID } from "./Utils/find";
+import { findPackagePrice, findServiceByID } from "./Utils/find";
 
 import "./Styles/style.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -25,6 +25,21 @@ function App() {
   const handleChangePrice = (newPrice) => {
     setTotalPrice(newPrice);
   };
+
+  function handleDeleteCart(service) {
+    const serviceIndex = carts.findIndex((cart) => cart.serv === service);
+
+    if (serviceIndex !== -1) {
+      handleChangePrice(
+        totalPrice -
+          findPackagePrice(carts[serviceIndex].serv, carts[serviceIndex].pack)
+      );
+      setCarts([
+        ...carts.slice(0, serviceIndex),
+        ...carts.slice(serviceIndex + 1),
+      ]);
+    }
+  }
 
   function handlePackageChange(service, pack) {
     const serviceIndex = carts.findIndex((cart) => cart.serv === service);
@@ -103,6 +118,7 @@ function App() {
                 totalPrice={totalPrice}
                 handleChangePrice={handleChangePrice}
                 handlePackageChange={handlePackageChange}
+                handleDeleteCart={handleDeleteCart}
               />
             }
           />

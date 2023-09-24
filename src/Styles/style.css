@@ -54,12 +54,20 @@ body {
   flex-direction: column;
 }
 
+.mt-1 {
+  margin-top: 10px;
+}
+
 .mt-2 {
   margin-top: 20px;
 }
 
 .mt-4 {
   margin-top: 40px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
 }
 
 .mb-2 {
@@ -72,6 +80,10 @@ body {
 
 .mr-1 {
   margin-right: 10px;
+}
+
+.mr-4 {
+  margin-right: 40px;
 }
 
 .w-100 {
@@ -436,6 +448,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .price-card {
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
   }
 }
 

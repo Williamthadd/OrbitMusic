@@ -2,6 +2,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import CartCard from "../Components/CartCard";
 import { findServiceByID } from "../Utils/find";
+import { formatNumberToK } from "../Utils/convert";
 
 export default function Cart(props) {
   // function calculateTotalPrice(carts) {
@@ -31,11 +32,15 @@ export default function Cart(props) {
                 handleChangePrice={props.handleChangePrice}
                 pack={cart.pack}
                 handlePackageChange={props.handlePackageChange}
+                handleDeleteCart={props.handleDeleteCart}
               />
             ))}
           </div>
         </div>
-        <div>{props.totalPrice}</div>
+        <div className="mt-2">
+          <div>Total</div>
+          <div>{formatNumberToK(props.totalPrice)}</div>
+        </div>
       </div>
       <Footer />
     </div>
