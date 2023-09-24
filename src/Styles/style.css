@@ -42,6 +42,10 @@ body {
   align-items: flex-start;
 }
 
+.ai-e {
+  align-items: flex-end;
+}
+
 .fd-r {
   flex-direction: row;
 }
@@ -50,12 +54,24 @@ body {
   flex-direction: column;
 }
 
+.mt-1 {
+  margin-top: 10px;
+}
+
 .mt-2 {
   margin-top: 20px;
 }
 
+.mt-3 {
+  margin-top: 30px;
+}
+
 .mt-4 {
   margin-top: 40px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
 }
 
 .mb-2 {
@@ -70,9 +86,12 @@ body {
   margin-right: 10px;
 }
 
+.mr-4 {
+  margin-right: 40px;
+}
+
 .w-100 {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 /* Dibawah ini custom CSS*/
@@ -329,6 +348,53 @@ body {
   border-radius: 2px;
 }
 
+.cart-card-container {
+  width: 58.3333vw;
+  border-radius: 10px;
+  background: #1e1e1e;
+}
+
+.cart-total-price {
+  color: #fff;
+  font-family: Orbitron;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.cart-add-more-services {
+  border-radius: 10px;
+  border: 1px solid #6b79bd;
+  background: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  outline: none;
+  padding: 15px;
+}
+
+.radio-card {
+  border-radius: 10px;
+  background: #1e1e1e;
+}
+
+.radio-card-checked {
+  background: #6b79bd;
+}
+
+.radio-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
 /* Home */
 .body-content {
   margin-left: 10vw;
@@ -388,6 +454,17 @@ body {
   background: #525d92;
 }
 
+.dropdown-select {
+  width: 100%;
+  padding: 10px;
+  background: #1e1e1e;
+  color: white;
+}
+
+.dropdown-select-option {
+  padding: 5px;
+}
+
 /* Mobile UI*/
 @media only screen and (max-width: 800px) {
   .hamburger-icon {
@@ -405,6 +482,26 @@ body {
 
   .searchBar-container > button {
     margin-top: 10px;
+  }
+
+  .cart-card-image {
+    display: none;
+  }
+
+  .cart-card-price {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price-card {
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
   }
 }
 

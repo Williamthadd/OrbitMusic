@@ -13,8 +13,8 @@ export default function ServiceCard(props) {
         <p className="mb-4 mt-2">{props.desc}</p>
         <LinkButton
           text={"View More"}
-          target={props.title}
-          handleChangeServices={props.handleChangeServices}
+          target={props.id}
+          handleSomething={props.handleChangeServices}
           linkTo={"/services/details"}
         />
       </div>

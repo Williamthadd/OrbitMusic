@@ -10,6 +10,7 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 
 import ServiceDetails from "./Pages/ServiceDetails";
+import { findPackagePrice, findServiceByID } from "./Utils/find";
 
 import "./Styles/style.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -17,11 +18,60 @@ import { useState } from "react";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
-  const [currentServices, setCurrentServices] = useState("");
-  const [carts, setCarts] = useState([""]);
+  const [currentServices, setCurrentServices] = useState(0);
+  const [carts, setCarts] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  function handleChangeCarts(carts) {
-    setCarts(carts);
+  const handleChangePrice = (newPrice) => {
+    setTotalPrice(newPrice);
+  };
+
+  function handleDeleteCart(service) {
+    const serviceIndex = carts.findIndex((cart) => cart.serv === service);
+
+    if (serviceIndex !== -1) {
+      handleChangePrice(
+        totalPrice -
+          findPackagePrice(carts[serviceIndex].serv, carts[serviceIndex].pack)
+      );
+      setCarts([
+        ...carts.slice(0, serviceIndex),
+        ...carts.slice(serviceIndex + 1),
+      ]);
+    }
+  }
+
+  function handlePackageChange(service, pack) {
+    const serviceIndex = carts.findIndex((cart) => cart.serv === service);
+    console.log(serviceIndex);
+    console.log(carts[serviceIndex]);
+
+    // Change service package in carts
+    if (serviceIndex !== -1) {
+      setCarts([
+        ...carts.slice(0, serviceIndex),
+        { serv: service, pack: pack },
+        ...carts.slice(serviceIndex + 1),
+      ]);
+    }
+  }
+
+  function handleChangeCarts(service) {
+    const foundService = findServiceByID(service);
+    // const serviceIndex = carts.findIndex((cart) => cart.serv === service);
+    console.log(foundService);
+
+    if (
+      foundService &&
+      carts.findIndex((cart) => cart.serv === service) === -1
+    ) {
+      // Check if the service was found before adding it to the cart
+      setCarts([
+        ...carts,
+        { serv: foundService.id, pack: foundService.package[0].packname },
+      ]);
+      handleChangePrice(totalPrice + foundService.package[0].price);
+    }
   }
 
   function handleChangePage(text) {
@@ -65,6 +115,10 @@ function App() {
                 handleChangePage={handleChangePage}
                 carts={carts}
                 handleChangeCarts={handleChangeCarts}
+                totalPrice={totalPrice}
+                handleChangePrice={handleChangePrice}
+                handlePackageChange={handlePackageChange}
+                handleDeleteCart={handleDeleteCart}
               />
             }
           />
@@ -130,6 +184,7 @@ function App() {
                 currentServices={currentServices}
                 currentPage={currentPage}
                 handleChangePage={handleChangePage}
+                handleChangeCarts={handleChangeCarts}
               />
             }
           />
