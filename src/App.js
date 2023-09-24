@@ -46,16 +46,16 @@ function App() {
     // const serviceIndex = carts.findIndex((cart) => cart.serv === service);
     console.log(foundService);
 
-    if (foundService) {
+    if (
+      foundService &&
+      carts.findIndex((cart) => cart.serv === service) === -1
+    ) {
       // Check if the service was found before adding it to the cart
       setCarts([
         ...carts,
         { serv: foundService.id, pack: foundService.package[0].packname },
       ]);
       handleChangePrice(totalPrice + foundService.package[0].price);
-    } else {
-      // Handle the case where the service was not found
-      console.error(`Service with id "${service}" not found.`);
     }
   }
 
