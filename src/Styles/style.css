@@ -62,6 +62,10 @@ body {
   margin-top: 20px;
 }
 
+.mt-3 {
+  margin-top: 30px;
+}
+
 .mt-4 {
   margin-top: 40px;
 }
@@ -348,6 +352,47 @@ body {
   width: 58.3333vw;
   border-radius: 10px;
   background: #1e1e1e;
+}
+
+.cart-total-price {
+  color: #fff;
+  font-family: Orbitron;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.cart-add-more-services {
+  border-radius: 10px;
+  border: 1px solid #6b79bd;
+  background: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  outline: none;
+  padding: 15px;
+}
+
+.radio-card {
+  border-radius: 10px;
+  background: #1e1e1e;
+}
+
+.radio-card-checked {
+  background: #6b79bd;
+}
+
+.radio-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 /* Home */
