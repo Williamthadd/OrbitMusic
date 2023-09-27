@@ -12,9 +12,9 @@ const Services = [
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
     package: [
-      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
-      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
-      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 200000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 750000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 6400000 },
     ],
   },
   {
@@ -30,9 +30,9 @@ const Services = [
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
     package: [
-      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
-      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
-      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+      { packname: "Silver", packdesc: "2 Weeks Promotion", price: 450000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 1000000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 7200000 },
     ],
   },
   {
@@ -48,9 +48,8 @@ const Services = [
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
     package: [
-      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
-      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
-      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+      { packname: "Silver", packdesc: "Lite Promotion", price: 500000 },
+      { packname: "Gold", packdesc: "Mega Promotion", price: 4000000 },
     ],
   },
   {
@@ -66,9 +65,9 @@ const Services = [
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
     package: [
-      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
-      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
-      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 500000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 1200000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 11200000 },
     ],
   },
   {
@@ -84,9 +83,9 @@ const Services = [
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
     package: [
-      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
-      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
-      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 650000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 1950000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 17600000 },
     ],
   },
   {
@@ -102,9 +101,9 @@ const Services = [
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
     package: [
-      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
-      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
-      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 1100000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 2800000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 12000000 },
     ],
   },
   {
@@ -120,9 +119,9 @@ const Services = [
     requirements:
       "Music can't contain hate speech, racism, or any kind of discrimination",
     package: [
-      { packname: "Silver", packdesc: "1 Week Promotion", price: 100000 },
-      { packname: "Gold", packdesc: "1 Month Promotion", price: 300000 },
-      { packname: "Diamond", packdesc: "1 Year Promotion", price: 3250000 },
+      { packname: "Silver", packdesc: "1 Week Promotion", price: 1500000 },
+      { packname: "Gold", packdesc: "1 Month Promotion", price: 3100000 },
+      { packname: "Diamond", packdesc: "1 Year Promotion", price: 15500000 },
     ],
   },
 ];
