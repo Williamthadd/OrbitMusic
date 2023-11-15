@@ -3,11 +3,12 @@ import Footer from "../Components/Footer";
 import CartCard from "../Components/CartCard";
 import { findServiceByID } from "../Utils/find";
 import { formatNumberToK } from "../Utils/convert";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import RadioGroup from "../Components/RadioButton";
 import PaymentData from "../Data/PaymentData";
 import InputField from "../Components/InputField";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { auth, database, ref, get, update } from "../Firebase/FirebaseConfig";
 
 export default function Cart(props) {
   // function calculateTotalPrice(carts) {
@@ -18,10 +19,41 @@ export default function Cart(props) {
   //   props.handleChangePrice(totalPrice);
   // }
 
-  const [selectedOption, setSelectedOption] = useState(PaymentData[0].value);
+  const user = auth.currentUser;
 
+  const [selectedOption, setSelectedOption] = useState(PaymentData[0].value);
   const handleOptionChange = (newValue) => {
     setSelectedOption(newValue);
+  };
+
+  // validate input
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [file, setFile] = useState('');
+  const navigate = useNavigate();
+  const [err, setErr] = useState(false);
+
+  const handlePhoneChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleFileChange = (e) => {
+    setFile(e.target.value);
+  };
+
+  const handleButtonClick = () => {
+    if (phoneNumber.trim() === '' || email.trim() === '' || file.trim() === '') {
+      setErr(true);
+    } else {
+      setErr(false);
+      console.log('Navigating to /PaymentSuccessful');
+      navigate('/PaymentSuccessful');
+      window.location.reload();
+    }
   };
 
   return (
@@ -79,6 +111,7 @@ export default function Cart(props) {
             <Link
               className="cart-add-more-services w-100"
               style={{ flexGrow: "1" }}
+              to="/Services"
             >
               Add More Services
             </Link>
@@ -100,13 +133,47 @@ export default function Cart(props) {
             className="flex fd-c ai-c jc-c mt-3 w-100"
             style={{ gap: "20px" }}
           >
-            <InputField text={"Phone Number"} placeholder={"+62xxxxxxxxx"} />
-            <InputField
-              text={"Email Address"}
-              placeholder={"example@domain.com "}
+          
+          <input
+            text={"Phone Number"} 
+            type="number"
+            placeholder={"+62xxxxxxxxx"} 
+            value={phoneNumber}
+            onChange={handlePhoneChange}
+            className="w-100"
+            style={{ padding: "10px", borderRadius: "5px", outline: "none" }}
+          />
+
+          <input
+            text={"Email Address"}
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            placeholder={"example@domain.com "}
+            className="w-100"
+            style={{ padding: "10px", borderRadius: "5px", outline: "none"}}
+          />
+          
+          <div className="fileinput">
+            <label htmlFor="fileInput" className="labelforfile">Submit your music zip folder  </label>
+            <input
+              className="inputforfile"
+              type="file"
+              value={file}
+              onChange={handleFileChange}
             />
+          </div>
+          
+
+          {err && <span style={{ color: 'red' }}>Please fill all informations correctly</span>}
+          <br />
+
+          {user ? (
+          
             <button
-              className="w-100 flex jc-c ai-c mb-4"
+              className="flex jc-c ai-c mb-4"
+              onClick={handleButtonClick}
+              type="submit"
               style={{
                 background: "#6b79bd",
                 padding: "10px",
@@ -114,10 +181,32 @@ export default function Cart(props) {
                 border: "none",
                 borderRadius: "5px",
                 fontWeight: "600",
+                fontSize: "20px",
+                width: "102%"
               }}
             >
-              One tap purchase
+              Purchase
             </button>
+          
+        ) : (
+          <Link to="/Login">
+            <button
+              className="flex jc-c ai-c mb-4"
+              style={{
+                background: "#6b79bd",
+                padding: "10px",
+                color: "#FFF",
+                border: "none",
+                borderRadius: "5px",
+                fontWeight: "600",
+                fontSize: "20px",
+                width: "102%"
+              }}
+            >
+              Do Login First
+            </button>
+          </Link>
+        )}
           </div>
         </div>
       </div>

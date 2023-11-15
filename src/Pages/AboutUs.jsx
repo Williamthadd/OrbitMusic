@@ -31,7 +31,7 @@ const AboutUs = (props) => {
         </p>
 
         <h3 className="About-Us-Quote">
-          Make your music, and we will take care of the rest
+          "Make your music, and we will take care of the rest"
         </h3>
 
         <h1 className="What-Do-We-Do-Title">What Do We Do</h1>

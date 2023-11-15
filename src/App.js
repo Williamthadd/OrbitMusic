@@ -188,6 +188,13 @@ function App() {
               />
             }
           />
+          <Route
+            path="/PaymentSuccessful"
+            element={
+              <PaymentSuccessful
+              />
+            }
+          />
         </Routes>
       </Router>
     </div>

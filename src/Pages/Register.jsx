@@ -1,26 +1,56 @@
 import React, { useState } from 'react';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
+import { auth, database, createUserWithEmailAndPassword, ref, set } from "../Firebase/FirebaseConfig";
 
 const Register = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-    phoneNumber: '',
-  });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const [err, setErr] = useState(null);
 
-  const handleSubmit = (e) => {
+  // Use useNavigate instead of useHistory
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    const username = e.target[0].value;
+    const email = e.target[1].value;
+    const password = e.target[2].value;
+    const phoneNumber = e.target[3].value;
+    
+    console.log("First step");
     e.preventDefault();
+    console.log("start");
+  
+    try {
+      
+      // Create a new user in Firebase Authentication
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log("run usercredential");
+  
+      // Store additional user information in Firebase Realtime Database
+      await set(ref(database, 'users/' + userCredential.user.uid), {
+        username,
+        email,
+        password,
+        phoneNumber
+      });
+      console.log("Final Step");
+      // Redirect to the login page or perform any other action
+      // You can use React Router for navigation
+      navigate('/Login');
+    } catch (error) {
+      // Log the entire error object to get more information
+      setErr(error.message);
+      console.error('Error registering user:', error);
+  
+    }
   };
 
-  return (
+  return ( 
     <div className="container">
       <Header />
       <div className="flex jc-c page-title">
@@ -37,8 +67,8 @@ const Register = () => {
               type="text"
               id="username"
               name="username"
-              value={formData.username}
-              onChange={handleInputChange}
+              placeholder='name...'
+              required
             />
           </div>
           <div className="form-group-Profile">
@@ -48,8 +78,8 @@ const Register = () => {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleInputChange}
+              placeholder='email...'
+              required
             />
           </div>
           <div className="form-group-Profile">
@@ -59,8 +89,8 @@ const Register = () => {
               type="password"
               id="password"
               name="password"
-              value={formData.password}
-              onChange={handleInputChange}
+              placeholder='Must be Alphanumberic & Symbolic...'
+              required
             />
           </div>
           <div className="form-group-Profile">
@@ -70,17 +100,24 @@ const Register = () => {
               type="tel"
               id="phoneNumber"
               name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleInputChange}
+              placeholder='Phone Number...'
+              required
             />
           </div>
-          <Link to="/">
-          <button type="submit" className="button1 form-group-Profile">Register</button>
-          </Link>
+
+          {err && <span style={{ color: 'red' }}>Something went wrong</span>}
+          <br />
+
+          <button className="button1 form-group-Profile" type="submit">
+            Register
+          </button>
+
+          
         </form>
+
         <p>Already have an account?</p>
         <Link to="/login">
-          <button type="submit" className="button1 form-group-Profile">Login</button>
+          <button className="button1 form-group-Profile">Login</button>
         </Link>
       </div>
 

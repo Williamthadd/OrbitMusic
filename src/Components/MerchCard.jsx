@@ -3,7 +3,7 @@ import Button1 from "./Button1";
 export default function MerchCard({ image, title, artist, size, price }) {
   return (
     <div className="inner-card-container">
-      <img src={image} alt="tshirts" className="inner-card-img"></img>
+      <img src={image} alt="tshirts" id="merchimg"></img>
       <div className="inner-card-desc flex fd-c ai-c">
         <h3>{title}</h3>
         <h3>{artist}</h3>

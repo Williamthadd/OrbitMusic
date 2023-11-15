@@ -162,6 +162,10 @@ body {
   object-fit: contain;
 }
 
+.youtube{
+  margin-top: -5px;
+}
+
 .footer {
   width: 100%;
   bottom: 0px;
@@ -193,7 +197,7 @@ body {
 }
 
 .socialmedia-logo {
-  margin-top: -20px;
+  margin-top: -5px;
 }
 
 .inner-card-container {
@@ -672,4 +676,36 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
+}
+
+/* merch */
+#merchimg{
+  width: 100%;
+  height: auto;
+ 
+}
+
+/* unlogged in page*/
+.distance-unlogin{
+  height: 85px;
+}
+
+/* insert file in cart page*/
+
+.fileinput{
+  align-items: start;
+  align-self: self-start;
+  align-content: start;
+  margin-left: -10px;
+  gap: 15px;
+  float: left;
+}
+
+@media screen and (max-width: 1050px){
+  .labelforfile{
+    float: left;
+  }
+  .inputforfile{
+    float: left;
+  }
 }
