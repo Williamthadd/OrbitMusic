@@ -9,15 +9,15 @@ const Merch = [
   },
   {
     id: 1,
-    image: "/Assets/tshirts1.jpg",
-    title: "blur Black T-shirt Classic",
+    image: "/Assets/tshirts1.png",
+    title: "Blur White T-shirt Classic",
     artist: "blur Band",
     size: "S/M/L/XL/XXL",
     price: "IDR 210K",
   },
   {
     id: 2,
-    image: "/Assets/tshirts2.jpg",
+    image: "/Assets/tshirts2.png",
     title: "Deus Black T WORLDWIDE",
     artist: "Lil DEUS",
     size: "M/L/XL/XXL",
@@ -25,7 +25,7 @@ const Merch = [
   },
   {
     id: 3,
-    image: "/Assets/tshirts3.jpg",
+    image: "/Assets/tshirts3.png",
     title: "72 Hoodie Black Original",
     artist: "72 Club",
     size: "M/L/XL/XXL",

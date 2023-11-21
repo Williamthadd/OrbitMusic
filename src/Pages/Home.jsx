@@ -54,6 +54,7 @@ const Home = (props) => {
                     artist={song.artist}
                     genres={song.genres}
                     duration={song.duration}
+                    link={song.link}
                   />
                 )
               )}
@@ -72,6 +73,7 @@ const Home = (props) => {
                     artist={song.artist}
                     genres={song.genres}
                     duration={song.duration}
+                    link={song.link}
                   />
                 )
               )}

@@ -6,7 +6,7 @@ export default function SongCard(props) {
       className="inner-card-container"
       style={{
         width: "250px",
-        maxHeight: "600px",
+        height: "300px",
         paddingBottom: "30px",
       }}
     >
@@ -17,7 +17,7 @@ export default function SongCard(props) {
         style={{ marginBottom: "-20px", width: "250px" }}
       ></img>
       <div className="inner-card-desc flex fd-c ai-c mt-2">
-        <div className="mt-2">{props.name}</div>
+        <div className="mt-2" style={{fontSize: "25px"}}>{props.name}</div>
         <div className="card-p">{props.artist}</div>
         <div
           className="flex"
@@ -36,8 +36,10 @@ export default function SongCard(props) {
         </div>
 
         <div className="mt-2 mb-2">{props.duration}</div>
-
-        <Button1 text={"Play"} />
+          <a href={props.link} target="blank">
+          <button className="button1">Play</button>
+  
+          </a>
       </div>
     </div>
   );

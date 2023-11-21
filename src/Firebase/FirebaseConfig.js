@@ -3,7 +3,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { getDatabase, ref, set, get, update, } from 'firebase/database';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCf3oHP-wHy4Bov_qkw96TE4QXNv3kPvJ0",
+    apiKey: "AIzaSyCf3oHP-wHy4Bov_qkw96TE4QXNv3kPvJ0",          
   authDomain: "orbitmusic-1.firebaseapp.com",
   projectId: "orbitmusic-1",
   storageBucket: "orbitmusic-1.appspot.com",
