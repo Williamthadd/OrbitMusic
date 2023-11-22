@@ -2,7 +2,7 @@ import Button1 from "./Button1";
 
 export default function MerchCard({ image, title, artist, size, price }) {
   return (
-    <div className="inner-card-container" style={{height:"550px"}}>
+    <div className="inner-card-container merchflexbox" style={{height:"550px"}}>
       <img src={image} alt="tshirts" id="merchimg"></img>
       <div className="inner-card-desc flex fd-c ai-c">
         <h3>{title}</h3>
