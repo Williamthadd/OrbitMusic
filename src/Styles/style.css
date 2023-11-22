@@ -717,3 +717,11 @@ body {
     float: left;
   }
 }
+
+@media screen and (max-width: 1370px){
+  .merchflexbox{
+    min-height: 0px;
+    height: auto;
+    max-height: 500px;
+  }
+}
