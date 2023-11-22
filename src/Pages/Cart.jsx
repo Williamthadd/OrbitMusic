@@ -189,7 +189,7 @@ export default function Cart(props) {
             </button>
           
         ) : (
-          <Link to="/Login">
+          <Link to="/Login" style={{ textDecoration: 'none' }}>
             <button
               className="flex jc-c ai-c mb-4"
               style={{
